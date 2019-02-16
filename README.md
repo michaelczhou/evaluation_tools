@@ -80,6 +80,7 @@ evo_res results/*.zip -p --save_table results/table.csv
 ```
 
 ### 2.2 rgbd_benchmark_tools
+[Useful tools for the RGB-D benchmark](https://vision.in.tum.de/data/datasets/rgbd-dataset/tools#evaluation)
 #### 2.2.1associate.py
 通过timestamp用于生成rgb和depth关联文件
 
@@ -108,3 +109,9 @@ python evaluate_ate.py groundtruth.txt CameraTrajectory.txt --verbose
 
 ##### (2)RPE相对误差—evaluate_rpe.py
 适用于评估视觉里程计的漂移量
+##### (3)Generating a point cloud from images
+generate_pointcloud.py
+##### (4)Adding point clouds to ROS bag files
+add_pointclouds_to_bagfile.py
+##### (5)project_point_cloud_to_image.py
+##### (4)
