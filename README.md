@@ -31,12 +31,13 @@ python kitti_poses_and_timestamps_to_tum.py ${kittiPosefile} ${kittiTimefile} ${
 
 
 ## 2.tools
-[evo_wiki](https://github.com/MichaelGrupp/evo/wiki)
+
 ### 2.1 evo-plot
 安装：
 ```
 pip install evo --upgrade --no-binary evo
 ```
+[evo_wiki](https://github.com/MichaelGrupp/evo/wiki)
 #### 2.1.1画轨迹
 ```
 evo_traj euroc data.csv --plot
