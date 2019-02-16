@@ -1,0 +1,7 @@
+%YAML:1.0
+
+gpsfile: /home/xjh/guiji/gpsout.txt
+velodyneStampFile: /home/xjh/guiji/velodyne_packets.txt
+velodynePoseFile: /home/xjh/guiji/poseV3KITTI.txt
+outGTFile: /home/xjh/guiji/EVOvelodyne_gtV3.txt
+outPoseFile: /home/xjh/guiji/EVOvelodyne_poseV3.txt

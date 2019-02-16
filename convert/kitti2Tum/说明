@@ -1,0 +1,4 @@
+转换kitti格式的pose为tum格式
+用法: ./convert ${KITTIPOSE} ${time.txt} ${OUTPOSE}
+convert1用于转换轨迹真值和灰度序列轨迹
+convert2用于转换彩色序列轨迹
