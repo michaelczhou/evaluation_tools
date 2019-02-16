@@ -44,12 +44,17 @@ evo_config set plot_figsize 5 4.5
 #### 2.1.6处理不同结果
 
 *First trajectory (ORB Stereo):*
+
 mkdir results
+
 evo_ape kitti KITTI_00_gt.txt KITTI_00_ORB.txt -va --plot --plot_mode xz --save_results results/ORB.zip
 
 *Second trajectory (S-PTAM):*
+
 evo_ape kitti KITTI_00_gt.txt KITTI_00_SPTAM.txt -va --plot --plot_mode xz --save_results results/SPTAM.zip
 
 Here, we use the results from above to generate a plot and a table:
+
 evo_res results/*.zip -p --save_table results/table.csv
+
 ### 2.2tum
