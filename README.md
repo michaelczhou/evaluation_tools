@@ -31,7 +31,7 @@ python kitti_poses_and_timestamps_to_tum.py ${kittiPosefile} ${kittiTimefile} ${
 
 
 ## 2.tools
-### 2.1evo
+### 2.1 evo-plot
 安装：
 ```
 pip install evo --upgrade --no-binary evo
@@ -79,4 +79,32 @@ Here, we use the results from above to generate a plot and a table:
 evo_res results/*.zip -p --save_table results/table.csv
 ```
 
-### 2.2tum
+### 2.2 rgbd_benchmark_tools
+#### 2.2.1associate.py
+通过timestamp用于生成rgb和depth关联文件
+
+```
+python associate.py rgb.txt depth.txt > fr_pioneer_slam2.txt
+```
+
+#### 2.2.2评估标准
+运行完rgbd_tum 后生成CameraTrajectory.txt
+
+##### (1)ATE 绝对误差—evaluate_ate.py
+适用于评估视觉SLAM系统
+```
+python evaluate_ate.py groundtruth.txt CameraTrajectory.txt
+````
+###### 输出RMSE/cm误差
+
+```
+python evaluate_ate.py groundtruth.txt CameraTrajectory.txt --plot result.png
+````
+###### 输出真实轨迹和预测轨迹以及误差
+```
+python evaluate_ate.py groundtruth.txt CameraTrajectory.txt --verbose
+```
+###### 输出所有误差，包含平均值，中值等
+
+##### (2)RPE相对误差—evaluate_rpe.py
+适用于评估视觉里程计的漂移量
