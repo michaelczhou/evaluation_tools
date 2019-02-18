@@ -28,7 +28,15 @@ python kitti_poses_and_timestamps_to_tum.py ${kittiPosefile} ${kittiTimefile} ${
 ### 1.5rtkgps2pose
 转换gps的msg为pose文件. 在脚本文件中设置bag包的名字,输出文件名字以及gps中心和传感器中心的偏移量参数,如果已经修正过,则将偏移量参数设置为0,运行完之后得到 time x y z yaw格式的轨迹文件
 ### 1.6convertpose.py
-
+### 1.7kitti2bag
+```
+sudo apt-get install pip 
+sudo pip install kitti2bag
+```
+将原始文件下载后，解压到同一个文件下（可将三个标定文件加入另一个文件夹下）,然后可开始转换。
+```
+kitti2bag -t 2011_10_03 -r 0027 raw_synced .
+```
 
 ## 2.tools
 
