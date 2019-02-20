@@ -43,7 +43,7 @@ kitti2bag -t 2011_10_03 -r 0027 raw_synced .
 ### 2.1 evo-plot
 安装：
 ```
-pip install evo --upgrade --no-binary evo
+sudo pip install evo --upgrade --no-binary evo
 ```
 [evo_wiki](https://github.com/MichaelGrupp/evo/wiki)
 #### 2.1.1画轨迹
