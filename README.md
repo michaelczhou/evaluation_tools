@@ -37,6 +37,20 @@ sudo pip install kitti2bag
 ```
 kitti2bag -t 2011_10_03 -r 0027 raw_synced .
 ```
+### 1.8 kitti_devkit
+```
+sudo apt-get install texlive-extra-utils
+sudo apt-get install gnuplot
+```
+#### 1.8.1download KITTI odometry ground truth datas to "PATH/TO/WORKSPACE/dataset/poses"
+#### 1.8.2build target :
+g++ -O3 -DNDEBUG -o evaluate_odometry evaluate_odometry.cpp matrix.cpp
+#### 1.8.3put target <evaluaate_odometry> to your SLAM eval workspace.
+#### 1.8.4usage:
+./evaluate_odometry {PATH/TO/YOUR/SLAM/RESULT} {KITTI_SEQUENCE_NUMBER}
+
+for example:
+./evaluate_odometry ./CameraTrajectory.txt 2
 
 ## 2.tools
 
