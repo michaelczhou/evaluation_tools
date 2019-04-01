@@ -64,7 +64,9 @@ sudo pip install evo --upgrade --no-binary evo
 ```
 evo_traj euroc data.csv --plot
 evo_traj tum output.txt --ref=tum06.txt -p --plot_mode=xz
+evo_traj tum output.txt --ref=tum00_gt.txt -p -a -v
 ```
+-a 可自动对齐 -v 参数更详细
 #### 2.1.2转轨迹格式
 ```
 evo_traj euroc data.csv --save_as_tum (--save_as_bag --save_as_kitti)
