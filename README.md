@@ -16,7 +16,7 @@ Some tools for the evaluation of odometry and SLAM.
 convert1用于转换轨迹真值和灰度序列轨迹
 convert2用于转换彩色序列轨迹
 ### 1.2kitti_poses_and_timestamps_to_tum.py
-将KITTI格式转化为Tum格式的Python脚本
+一般先将KITTI格式转化为Tum格式的Python脚本，再使用1.3修改真值的时间戳
 #### 用法：
 ```
 python kitti_poses_and_timestamps_to_tum.py ${kittiPosefile} ${kittiTimefile} ${Tumfile}
