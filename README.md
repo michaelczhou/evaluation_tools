@@ -66,8 +66,9 @@ evo_traj euroc data.csv --plot
 evo_traj tum output.txt --ref=tum06.txt -p --plot_mode=xz
 evo_traj tum output.txt --ref=tum00_gt.txt -p -a -v
 ```
--a 可自动对齐 -v 参数更详细
+-a 可自动对齐R|t -s 矫正尺度 -v 参数更详细 -p 显示 --t_max_diff 设置最大时间偏移 --t_offset 有固定时间差
 #### 2.1.2转轨迹格式
+kitti无法转tum，因为pose.txt里没有时间戳，只有位姿。
 ```
 evo_traj euroc data.csv --save_as_tum (--save_as_bag --save_as_kitti)
 ```
